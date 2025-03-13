@@ -1,28 +1,76 @@
-## Spring Boot
-This is a simple Spring Boot project. This application serves as a basic template for a Spring Boot based application.
-This project is bootstrapped with [Spring Initializr](https://start.spring.io/).
+Here’s your updated **README.md** with MongoDB configuration, API endpoints, and your video link.  
 
-## How to run
+---
 
-1. Run the application by running the following command in the terminal:
-   ```sh
-   mvn spring-boot:run
-   ```   
+### **📦 Product API - Spring Boot with MongoDB**
+This is a **Spring Boot REST API** for managing products using **MongoDB** as the database.
 
-2. Refresh the URL in a simple browser to see the output. You can also click the run button above the Main program to run the application instead the above command.
+🔗 **Live API:** [Product API](https://nixxlo-8080.bytexl.dev/api/products)  
+🎥 **Demo Video:** [Watch Here](https://drive.google.com/file/d/1Wv6kYSuUqjgx3g2jkb382MRzd1gRVTDb/view?usp=sharing)  
+🌐 **GitHub Repository:** [Product API GitHub](https://github.com/yashdongre12/product.git)
+
+---
+
+## **📌 Features**
+- 🗄️ Uses **MongoDB** as the database
+- 🌐 RESTful API for **CRUD operations** on products
+- 🔥 Built with **Spring Boot**
+
+---
+
+## **⚙️ Installation & Setup**
+### **1️⃣ Clone the Repository**
+```sh
+git clone https://github.com/yashdongre12/product.git
+cd product
+```
+
+### **2️⃣ Configure MongoDB in `application.properties`**
+Update your **MongoDB credentials** in `src/main/resources/application.properties`:
+```properties
+spring.data.mongodb.host=bytexldb.com
+spring.data.mongodb.port=5050
+spring.data.mongodb.database=db_43asngdub
+spring.data.mongodb.username=user_43asngdub
+spring.data.mongodb.password=p43asngdub
+spring.data.mongodb.authentication-database=admin
+```
+
+### **3️⃣ Run the Application**
+```sh
+mvn spring-boot:run
+```
+
+---
+
+## **🛠️ API Endpoints**
+| Method | Endpoint               | Description                  |
+|--------|------------------------|------------------------------|
+| **GET**    | `/api/products`         | Get all products             |
+| **GET**    | `/api/products/{id}`    | Get product by ID            |
+| **POST**   | `/api/products`         | Add a new product            |
+| **PUT**    | `/api/products/{id}`    | Update a product by ID       |
+| **DELETE** | `/api/products/{id}`    | Delete a product by ID       |
+
+---
+
+## **📜 Product Model**
+```json
+{
+  "id": "string",
+  "name": "string",
+  "price": "number"
+}
+```
+
+---
+
+## **💡 Contributing**
+Feel free to contribute by submitting **issues** or **pull requests**.
+
+---
+![image](https://github.com/user-attachments/assets/4bea018e-4861-431b-b38d-437c4b69f67e)
+![image](https://github.com/user-attachments/assets/73f613af-bd15-4f03-bf98-4752b65f9452)
 
 
-![](https://static.onecompiler.com/images/posts/3zzkbysj7/run-spring-boot.png)
 
-> If you do not see the Run button, Please wait for a minute for the project to load and open as a Java Project.
-
-<!-- 1. Before running the application, make sure all dependencies are installed. To install dependencies, run following command in terminal:
-   ```sh
-   ./gradlew build -x test
-   ```
-
-2. To run the application, run following command in terminal:
-   ```sh
-   ./gradlew bootRun
-   ```   
-3. Refresh the URL in simple browser to see the output.    -->
